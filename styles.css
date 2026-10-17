@@ -23,3 +23,15 @@
 .partner-arrow{margin-left:auto;font-size:23px;padding:8px;transition:transform .2s}
 .partner:hover .partner-arrow{transform:translate(2px,-2px)}
 @media(max-width:650px){.partners-list{grid-template-columns:1fr}.partner,.partner:first-child,.partner:last-child{padding:22px 0;border-right:0}.partner:first-child{border-bottom:1px solid var(--line)}.partner-icon{width:64px;height:64px;flex-basis:64px}.partner-guide img{width:380.44px;left:-28.44px;top:-16.89px}.partner-name strong{font-size:23px}.partner{gap:16px}}
+
+/* Depoimentos fornecidos pelos clientes. */
+.testimonials{padding-bottom:80px}
+.testimonial-panel{border-top:1px solid var(--line);padding-top:48px}
+.testimonials h2{font-size:clamp(30px,3.5vw,48px);max-width:680px}
+.testimonial{position:relative;margin:32px 0 0;padding:36px 44px 36px 94px;background:#fff;border-radius:26px}
+.testimonial-quote{position:absolute;left:32px;top:19px;font-family:Bricolage,Arial,sans-serif;font-size:92px;line-height:1;color:#c74720}
+.testimonial blockquote{margin:0;max-width:940px}
+.testimonial blockquote p{font-family:Bricolage,Arial,sans-serif;font-size:clamp(21px,2.35vw,31px);line-height:1.45;letter-spacing:-.02em}
+.testimonial figcaption{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:15px;font-weight:600}
+.testimonial-initials{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:50%;background:var(--lavender);font-size:12px;letter-spacing:.04em}
+@media(max-width:650px){.testimonials{padding-bottom:56px}.testimonial-panel{padding-top:32px}.testimonial{padding:62px 24px 28px;margin-top:24px;border-radius:22px}.testimonial-quote{top:12px;left:22px;font-size:70px}.testimonial figcaption{margin-top:24px}}
