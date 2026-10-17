@@ -4,3 +4,22 @@
 @media(max-width:800px){.wrap{width:calc(100% - 40px)}.header{min-height:90px;flex-wrap:wrap;position:relative}.brand{font-size:22px}.menu-toggle{display:flex;align-items:center;gap:20px;border:1px solid var(--line);border-radius:30px;padding:7px 14px;background:transparent;font-size:13px;cursor:pointer}.header nav{display:none;flex-basis:100%;padding-bottom:22px;align-items:stretch}.header nav.open{display:flex;flex-direction:column;gap:0}.header nav a{padding:13px}.header nav .button{margin-top:10px}.hero{padding-top:35px;grid-template-columns:1fr;gap:50px;padding-bottom:60px}h1{font-size:clamp(48px,9vw,74px);max-width:650px}.hero-copy>p{max-width:530px}.hero-art{max-width:430px;width:calc(100% - 24px);margin:12px auto;gap:13px}.tile{border-radius:25px}.intro-strip .wrap{flex-wrap:wrap;gap:10px}.intro-strip p{font-size:15px}.strip-plus{display:none}.section{padding-block:64px}.about{grid-template-columns:1fr;gap:25px}.about-copy>p:first-child{font-size:19px}.section-heading{gap:25px;align-items:start;flex-direction:column;margin-bottom:30px}.section-heading>p{max-width:500px}.projects{padding-top:10px}.project-grid{gap:30px;grid-template-columns:1fr}.project-visual{aspect-ratio:1.55}.restaurant-brand>span{font-size:42px}.restaurant-brand img{max-width:180px}.dental-body strong{font-size:32px}.dental-body small{font-size:8px}.dental-body{padding:30px}.project-copy{padding-top:20px}.values-panel{padding:32px 26px;border-radius:26px}.values-panel .section-heading{flex-direction:row;align-items:center}.values-flower{font-size:65px}.values-grid{grid-template-columns:1fr 1fr;gap:30px 24px}.values-grid h3{font-size:23px}.number{margin-bottom:17px}.contact{grid-template-columns:1fr;gap:18px}.contact-links{padding-top:0}.contact-links strong{font-size:25px}.footer-main{flex-wrap:wrap;gap:35px}.footer-main>div{width:100%}.footer-bottom{flex-direction:column;gap:8px}.eyebrow{margin-bottom:19px}}
 @media(max-width:380px){.brand{font-size:19px;gap:7px}.brand-mark{width:33px;height:33px;font-size:32px}.menu-toggle{gap:10px}h1{font-size:44px}.hero-copy>p{font-size:16px}.actions{align-items:start;flex-direction:column}.restaurant-brand{padding:20px}.restaurant-brand>span{font-size:29px}.restaurant-sub{font-size:9px}.dental-body{padding:18px}.dental-body strong{font-size:24px}.dental-body small{font-size:6px}.values-grid{grid-template-columns:1fr}.values-flower{font-size:45px}.contact-links strong{font-size:20px}.contact-links>a{gap:12px}.contact-icon{width:42px;height:42px}.contact-arrow{display:none}.project-tag{font-size:9px;top:16px;left:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Clientes e parceiros: marcas alinhadas em uma faixa compacta. */
+.partners .eyebrow{margin-bottom:16px}
+.partners h2{font-size:clamp(32px,3.5vw,48px)}
+.partners-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:32px;border-block:1px solid var(--line)}
+.partner{display:flex;align-items:center;gap:20px;min-width:0;padding:28px 26px;transition:background .2s}
+.partner:first-child{padding-left:0;border-right:1px solid var(--line)}
+.partner:last-child{padding-right:0;padding-left:36px}
+.partner:hover{background:#eeece6}
+.partner-icon{position:relative;display:block;width:72px;height:72px;flex:0 0 72px;overflow:hidden;border-radius:50%}
+.partner-guide{border-radius:20px;background:#0c7061}
+.partner-guide img{position:absolute;width:428px;max-width:none;height:auto;left:-32px;top:-19px}
+.partner-milly img{display:block;width:100%;height:100%;object-fit:cover;clip-path:circle(45% at 50% 50%);transform:scale(1.12)}
+.partner-name{display:flex;flex-direction:column;gap:3px;min-width:0}
+.partner-name strong{font-family:Bricolage,Arial,sans-serif;font-size:25px;font-weight:600;letter-spacing:-.025em;line-height:1.2}
+.partner-name>span{font-size:13px;color:var(--muted)}
+.partner-arrow{margin-left:auto;font-size:23px;padding:8px;transition:transform .2s}
+.partner:hover .partner-arrow{transform:translate(2px,-2px)}
+@media(max-width:650px){.partners-list{grid-template-columns:1fr}.partner,.partner:first-child,.partner:last-child{padding:22px 0;border-right:0}.partner:first-child{border-bottom:1px solid var(--line)}.partner-icon{width:64px;height:64px;flex-basis:64px}.partner-guide img{width:380.44px;left:-28.44px;top:-16.89px}.partner-name strong{font-size:23px}.partner{gap:16px}}
