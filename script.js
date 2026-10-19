@@ -13,12 +13,10 @@ document.querySelector('#year').textContent = new Date().getFullYear();
   if (!carousel) return;
   const track = carousel.querySelector('.partners-track');
   const viewport = carousel.querySelector('.partners-viewport');
-  const previous = carousel.querySelector('[data-partners-prev]');
-  const next = carousel.querySelector('[data-partners-next]');
   if (!track || track.children.length < 2) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const duration = 650;
+  const duration = 420;
   let animating = false;
   let direction = '';
   let timer = null;
@@ -78,11 +76,9 @@ document.querySelector('#year').textContent = new Date().getFullYear();
     timer = setTimeout(() => {
       if (!animating) move('next');
       schedule();
-    }, 3600);
+    }, 1450);
   }
 
-  previous.addEventListener('click', () => { move('previous'); schedule(); });
-  next.addEventListener('click', () => { move('next'); schedule(); });
   viewport.addEventListener('mouseenter', () => { hovering = true; schedule(); });
   viewport.addEventListener('mouseleave', () => { hovering = false; schedule(); });
   carousel.addEventListener('focusin', (event) => {
