@@ -35,3 +35,7 @@
 .testimonial figcaption{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:15px;font-weight:600}
 .testimonial-initials{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:50%;background:var(--lavender);font-size:12px;letter-spacing:.04em}
 @media(max-width:650px){.testimonials{padding-bottom:56px}.testimonial-panel{padding-top:32px}.testimonial{padding:62px 24px 28px;margin-top:24px;border-radius:22px}.testimonial-quote{top:12px;left:22px;font-size:70px}.testimonial figcaption{margin-top:24px}}
+
+
+/* Setas e ornamentos vetoriais: aparência consistente em iOS e Android. */
+.inline-icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
