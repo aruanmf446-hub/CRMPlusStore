@@ -122,14 +122,12 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 })();
 
 
-/* Vitrines sincronizadas com os quatro sites publicados: sem screenshots fixos.
-   Exibe um fallback local até a prévia real carregar. Nenhum dado privado é lido. */
+/* Os iframes começam a carregar diretamente pelo HTML, sem demora artificial,
+   sem miniaturas falsas e sem recarga automática na frente do visitante. */
 (() => {
-  const previews = [...document.querySelectorAll('.showcase-tile[data-live-url]')];
+  const previews = [...document.querySelectorAll('.showcase-tile')];
   if (!previews.length) return;
   const frameWidth = 390;
-  const minimumRefreshMs = 120000; // Abas abertas também se atualizam.
-  const observes = new Map();
 
   const resize = () => {
     previews.forEach(tile => {
@@ -138,55 +136,22 @@ document.querySelector('#year').textContent = new Date().getFullYear();
     });
   };
   resize();
+
   if ('ResizeObserver' in window) {
-    const ro = new ResizeObserver(resize);
-    previews.forEach(tile => ro.observe(tile));
+    const observer = new ResizeObserver(resize);
+    previews.forEach(tile => observer.observe(tile));
   } else {
-    window.addEventListener('resize', resize, {passive: true});
+    window.addEventListener('resize', resize, {passive:true});
   }
 
   previews.forEach(tile => {
     const frame = tile.querySelector('.showcase-frame');
     if (!frame) return;
-    frame.addEventListener('load', () => {
-      tile.classList.add('is-loaded');
-      tile.dataset.loadedAt = String(Date.now());
-    });
-  });
-
-  function requestPreview(tile, refresh = false) {
-    if (document.hidden || observes.get(tile) === false) return;
-    const frame = tile.querySelector('.showcase-frame');
-    if (!frame || (!refresh && frame.hasAttribute('src'))) return;
-    const url = tile.dataset.liveUrl;
-    if (!url) return;
-    const last = Number(tile.dataset.loadedAt || 0);
-    if (refresh && Date.now() - last < minimumRefreshMs) return;
-    if (refresh) {
-      const fresh = new URL(url);
-      fresh.searchParams.set('crmplus_preview', String(Date.now()));
-      frame.src = fresh.href;
-    } else {
-      frame.src = url;
-    }
-  }
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        observes.set(entry.target, entry.isIntersecting);
-        if (entry.isIntersecting) requestPreview(entry.target);
+    const reveal = () => {
+      requestAnimationFrame(() => {
+        tile.classList.add('is-loaded');
       });
-    }, {rootMargin: '160px 0px', threshold: 0});
-    previews.forEach(tile => observer.observe(tile));
-  } else {
-    previews.forEach(tile => requestPreview(tile));
-  }
-
-  function refreshVisible() {
-    if (document.hidden) return;
-    previews.forEach(tile => requestPreview(tile, true));
-  }
-  document.addEventListener('visibilitychange', refreshVisible);
-  window.setInterval(refreshVisible, minimumRefreshMs);
+    };
+    frame.addEventListener('load', reveal, {once:true});
+  });
 })();
