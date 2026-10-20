@@ -40,17 +40,6 @@
 .pd-actions .pd-cta,.pd-end .pd-cta{display:inline-flex;align-items:center;justify-content:center;gap:15px;padding:16px 23px;border-radius:50px;font-weight:700;font-size:15px;background:#fff;color:var(--pd-night);transition:transform .2s}
 .pd-actions .pd-cta:hover,.pd-end .pd-cta:hover{transform:translateY(-3px)}
 .pd-actions .pd-link{padding:13px 4px;font-size:14px;color:#fff;text-decoration:underline;text-underline-offset:5px}
-.pd-visual{position:relative;min-height:405px;display:grid;place-items:center}
-.pd-logo-frame{position:relative;z-index:1;width:min(100%,380px);aspect-ratio:1;border:1px solid #ffffff66;border-radius:34px;padding:24px;background:#ffffff0b;box-shadow:0 35px 75px #0c216c66;transform:rotate(3deg)}
-.pd-logo-frame::before,.pd-logo-frame::after{content:"";position:absolute;inset:13px;border:1px solid #ffffff38;border-radius:25px;pointer-events:none}
-.pd-logo-frame::after{inset:27px;border-style:dashed;border-color:#ffffff20}
-.pd-logo-frame img{width:100%;height:100%;object-fit:contain;display:block;border-radius:18px}
-.pd-stamp{position:absolute;z-index:2;bottom:8px;left:-8px;background:var(--pd-gold);color:var(--pd-night);border-radius:100px;font-size:12px;font-weight:800;letter-spacing:.04em;padding:13px 19px;transform:rotate(-6deg);box-shadow:0 9px 20px #10287244}
-.pd-tile{width:90px;height:90px;position:absolute;border-radius:22px;border:2px solid #ffffff88;display:grid;place-items:center;opacity:.84}
-.pd-tile::before{content:"";height:48px;width:48px;border:2px solid white;border-radius:50%}
-.pd-tile.a{right:-4px;top:3px;transform:rotate(13deg)}
-.pd-tile.b{left:7px;top:9px;transform:rotate(-14deg)}
-.pd-tile.c{right:1px;bottom:1px;transform:rotate(-12deg)}
 .pd-intro{padding:77px 0 34px}
 .pd-kicker{text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:700;color:var(--pd-blue);margin-bottom:18px}
 .pd-intro h2,.pd-features h2,.pd-end h2{font-size:clamp(34px,4.2vw,58px);line-height:1.08;letter-spacing:-.045em;max-width:760px}
@@ -83,9 +72,23 @@
 .pd-end small{display:block;margin-top:18px;color:#d4ddfc}
 .pd-footer{border-top:1px solid #d7dce6;padding:30px 0 40px;display:flex;justify-content:space-between;gap:22px;color:#606d84;font-size:13px}
 .pd-footer a{text-decoration:underline;text-underline-offset:3px}
-@media(max-width:900px){.pd-hero-inner{grid-template-columns:1fr;padding:54px 38px 60px;gap:28px}.pd-visual{min-height:310px}.pd-logo-frame{width:min(78%,280px)}.pd-features-head{display:block}.pd-features-head p{margin-top:18px;max-width:700px}}
-@media(max-width:650px){.pd-page .wrap{width:min(100% - 34px,1240px)}.pd-page .header{min-height:75px}.pd-page .brand{font-size:21px}.pd-page .pd-nav a:not(.button){display:none}.pd-page .pd-nav .button{padding:10px 15px;font-size:12px}.pd-breadcrumb{padding:5px 0 13px}.pd-hero{border-radius:23px}.pd-hero-inner{padding:40px 23px 36px;gap:22px}.pd-hero h1{font-size:clamp(37px,10vw,54px)}.pd-hero p{font-size:16px;margin-top:18px}.pd-actions{margin-top:24px}.pd-actions .pd-cta{width:100%}.pd-visual{min-height:248px}.pd-logo-frame{width:220px;padding:18px;border-radius:22px}.pd-stamp{font-size:10px;padding:9px 13px;left:4px}.pd-tile{width:64px;height:64px;border-radius:14px}.pd-tile::before{width:33px;height:33px}.pd-intro{padding:52px 0 24px}.pd-steps{grid-template-columns:1fr;gap:28px;margin-top:34px}.pd-features{padding:45px 0}.pd-feature-list{grid-template-columns:1fr}.pd-feature h3{font-size:20px}.pd-demo{padding:29px 23px;display:block}.pd-demo a{margin-top:20px;justify-content:center}.pd-faq{padding:58px 0 45px}.pd-end{padding:35px 24px 38px;margin-bottom:32px}.pd-footer{display:block;padding:24px 0 35px}.pd-footer p+p{margin-top:12px}}
+@media(max-width:900px){.pd-hero-inner{grid-template-columns:1fr;padding:54px 38px 60px;gap:28px}.pd-features-head{display:block}.pd-features-head p{margin-top:18px;max-width:700px}}
+@media(max-width:650px){.pd-page .wrap{width:min(100% - 34px,1240px)}.pd-page .header{min-height:75px}.pd-page .brand{font-size:21px}.pd-page .pd-nav a:not(.button){display:none}.pd-page .pd-nav .button{padding:10px 15px;font-size:12px}.pd-breadcrumb{padding:5px 0 13px}.pd-hero{border-radius:23px}.pd-hero-inner{padding:40px 23px 36px;gap:22px}.pd-hero h1{font-size:clamp(37px,10vw,54px)}.pd-hero p{font-size:16px;margin-top:18px}.pd-actions{margin-top:24px}.pd-actions .pd-cta{width:100%}.pd-intro{padding:52px 0 24px}.pd-steps{grid-template-columns:1fr;gap:28px;margin-top:34px}.pd-features{padding:45px 0}.pd-feature-list{grid-template-columns:1fr}.pd-feature h3{font-size:20px}.pd-demo{padding:29px 23px;display:block}.pd-demo a{margin-top:20px;justify-content:center}.pd-faq{padding:58px 0 45px}.pd-end{padding:35px 24px 38px;margin-bottom:32px}.pd-footer{display:block;padding:24px 0 35px}.pd-footer p+p{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.pd-actions .pd-cta,.pd-end .pd-cta{transition:none}}
+
+/* Prévia real do site do produto, com experiência equivalente à página odontológica. */
+.pd-live-preview{min-width:0;overflow:hidden;border:1px solid #ffffff50;border-radius:24px;background:#fff;color:var(--pd-night);box-shadow:0 26px 65px #0b256d5c}
+.pd-preview-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid #e8ebf1;background:#fbfcff;font-size:11px}
+.pd-preview-id{display:inline-flex;align-items:center;gap:10px;min-width:0}
+.pd-preview-id img{display:block;width:34px;height:34px;object-fit:contain;border-radius:7px}
+.pd-preview-id span{display:flex;flex-direction:column;line-height:1.3;color:#68738a}
+.pd-preview-id strong{font-size:13px;color:#111b32}
+.pd-preview-live{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;color:#47618a;font-weight:600}
+.pd-preview-live i{display:block;width:7px;height:7px;border-radius:50%;background:#15803d}
+.pd-live-preview iframe{display:block;width:100%;height:520px;border:0;background:#fff}
+.pd-preview-foot{border-top:1px solid #e8ebf1;padding:12px 17px;color:#59667e;font-size:12px;line-height:1.55}
+.pd-preview-foot strong{color:#1B3FA0}
+@media(max-width:650px){.pd-live-preview{border-radius:18px}.pd-live-preview iframe{height:450px}.pd-preview-bar{padding:10px 13px}.pd-preview-foot{padding:11px 13px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://crmplus.store/#organization","name":"CRM Plus Store","url":"https://crmplus.store/","email":"suporte@crmplus.store"},{"@type":"SoftwareApplication","@id":"https://crmplus.store/sistema-para-restaurantes#software","name":"Ponto do Pedido","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Ponto do Pedido: plataforma de gestão para restaurantes com aplicativos independentes e integrados de atendimento, cozinha, caixa, cardápio digital, delivery e módulos adicionais conforme o plano.","url":"https://pontodopedido.vercel.app/","image":"https://crmplus.store/assets/ponto-do-pedido.png","publisher":{"@id":"https://crmplus.store/#organization"},"featureList":["Comandas e mesas","Pedidos e atendimento","Cozinha","Cardápio digital","Delivery","Módulos de gestão conforme o plano"]},{"@type":"WebPage","@id":"https://crmplus.store/sistema-para-restaurantes#webpage","url":"https://crmplus.store/sistema-para-restaurantes","name":"Sistema para Restaurantes | Conheça o Ponto do Pedido na CRM Plus","inLanguage":"pt-BR","description":"Página comercial da CRM Plus Store sobre o Ponto do Pedido, sistema para restaurantes por assinatura.","mainEntity":{"@id":"https://crmplus.store/sistema-para-restaurantes#software"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CRM Plus Store","item":"https://crmplus.store/"},{"@type":"ListItem","position":2,"name":"Sistema para restaurantes","item":"https://crmplus.store/sistema-para-restaurantes"}]}]}</script>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
@@ -105,7 +108,11 @@
 <p>O Ponto do Pedido é um sistema para restaurantes por assinatura, com aplicativos independentes e integrados para atendimento, cozinha, cardápio digital e delivery. Conheça a solução e solicite informações para o seu restaurante.</p>
 <div class="pd-actions"><a class="pd-cta" href="https://wa.me/5591920084384?text=Ol%C3%A1!%20Tenho%20interesse%20no%20sistema%20Ponto%20do%20Pedido%20para%20meu%20restaurante.%20Gostaria%20de%20conhecer%20os%20planos." target="_blank" rel="noopener noreferrer">Tenho interesse <span aria-hidden="true">↗</span></a><a class="pd-link" href="https://pontodopedido.vercel.app/" target="_blank" rel="noopener noreferrer">Conhecer o aplicativo ↗</a></div>
 </div>
-<div class="pd-visual" aria-label="Identidade visual do Ponto do Pedido"><span class="pd-tile a" aria-hidden="true"></span><span class="pd-tile b" aria-hidden="true"></span><span class="pd-tile c" aria-hidden="true"></span><div class="pd-logo-frame"><img src="/assets/ponto-do-pedido.png" width="1280" height="1280" alt="Marca do aplicativo Ponto do Pedido"></div><span class="pd-stamp">ATENDIMENTO · COZINHA · DELIVERY</span></div>
+<div class="pd-live-preview" aria-label="Prévia ao vivo do site Ponto do Pedido">
+<div class="pd-preview-bar"><span class="pd-preview-id"><img src="/assets/ponto-do-pedido.png" width="34" height="34" alt=""><span>Prévia ao vivo<strong>Ponto do Pedido</strong></span></span><span class="pd-preview-live"><i aria-hidden="true"></i>Site oficial</span></div>
+<iframe title="Prévia interativa do site oficial do Ponto do Pedido" src="https://pontodopedido.vercel.app/" loading="eager" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+<div class="pd-preview-foot">Explore o site aqui mesmo ou use <strong>Conhecer o aplicativo</strong> para abrir a versão completa.</div>
+</div>
 </div></section>
 <section class="wrap pd-intro" aria-labelledby="pd-op-title">
 <div class="pd-kicker">Uma operação conectada</div><h2 id="pd-op-title">Da mesa à cozinha, as informações seguem com o pedido.</h2>
